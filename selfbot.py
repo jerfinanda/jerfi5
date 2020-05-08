@@ -353,7 +353,7 @@ def clientBot(op):
                         if ang.lower() == ".me":                          
                             client.sendContact(msg.to,clientMid)
                         if ang.lower() == ".lurk" or ang.lower() == ".sider" or ang.lower() == ".kick" or ang.lower() == ".invite" or ang.lower() == ".updatename: " or ang.lower() == ".groupname:" or ang.lower() == ".updatebio:":
-                            client.sendContact(msg.to,"Silahkan ketik .panduan")
+                            client.sendReplyMessage(msg.id,msg.to,"Silahkan ketik .panduan")
                         if ang.lower() == ".reboot":
                             client.sendMessage(msg.to, "Bot Rebooting..")
                             restartBot()
