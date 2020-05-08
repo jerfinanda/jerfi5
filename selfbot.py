@@ -782,7 +782,7 @@ def clientBot(op):
                                     cctv['readMember'][msg.to] = ""
                                     cctv['readTime'][msg.to] = datetime.now().strftime('%H:%M:%S')
                                     cctv['ROM'][msg.to] = {}
-                                    with open('sider.json', 'w') as fp:
+                                    with open('cctv.json', 'w') as fp:
                                         json.dump(cctv, fp, sort_keys=True, indent=4)
                                     client.sendReplyMessage(msg.id,msg.to,"Lurking already enabled")
                             else:
@@ -790,7 +790,7 @@ def clientBot(op):
                                    del cctv['readPoint'][msg.to]
                                    del cctv['readMember'][msg.to]
                                    del cctv['readTime'][msg.to]
-                                   with open('sider.json', 'w') as fp:
+                                   with open('cctv.json', 'w') as fp:
                                        json.dump(cctv, fp, sort_keys=True,indent=4)
                                  except:
                                      pass
@@ -798,7 +798,7 @@ def clientBot(op):
                                  cctv['readMember'][msg.to] = ""
                                  cctv['readTime'][msg.to] = datetime.now().strftime('%H:%M:%S')
                                  cctv['ROM'][msg.to] = {}
-                                 with open('sider.json', 'w') as fp:
+                                 with open('cctv.json', 'w') as fp:
                                      json.dump(cctv, fp, sort_keys=True, indent=4)
                                  client.sendReplyMessage(msg.id, msg.to, "Set reading point:\n" + readTime)
 
@@ -823,7 +823,7 @@ def clientBot(op):
                                         del cctv['readPoint'][msg.to]
                                         del cctv['readMember'][msg.to]
                                         del cctv['readTime'][msg.to]
-                                        with open('sider.json', 'w') as fp:
+                                        with open('cctv.json', 'w') as fp:
                                             json.dump(cctv, fp, sort_keys=True,indent=4)
                                 except:
                                       pass
@@ -849,7 +849,7 @@ def clientBot(op):
                                         cctv["readMember"][msg.to] = {}
                                         cctv["readTime"][msg.to] = readTime
                                         cctv["ROM"][msg.to] = {}
-                                        with open('sider.json', 'w') as fp:
+                                        with open('cctv.json', 'w') as fp:
                                             json.dump(cctv, fp, sort_keys=True,indent=4)
                                     except:
                                         pass
